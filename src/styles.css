@@ -2,7 +2,7 @@
 
 body {
     font-family: 'IM Fell DW Pica', serif;
-    background-color: #EEF0F1;
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #dce0e7 100%);
 }
 
 * {

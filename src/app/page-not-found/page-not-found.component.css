@@ -1,0 +1,11 @@
+div {
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    width: 500px;
+    margin: 120px;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
