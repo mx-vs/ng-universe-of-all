@@ -18,6 +18,8 @@ import { RegisterComponent } from './register/register.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AdventuresComponent } from './adventures/adventures.component';
 import { MyCharactersComponent } from './my-characters/my-characters.component';
+import { RealmSelectComponent } from './realm-select/realm-select.component';
+import { RaceSelectComponent } from './race-select/race-select.component';
 
 
 @NgModule({
@@ -30,7 +32,9 @@ import { MyCharactersComponent } from './my-characters/my-characters.component';
     RegisterComponent,
     PageNotFoundComponent,
     AdventuresComponent,
-    MyCharactersComponent
+    MyCharactersComponent,
+    RealmSelectComponent,
+    RaceSelectComponent
   ],
   imports: [
     BrowserModule,
