@@ -2,10 +2,12 @@
 
 body {
     font-family: 'IM Fell DW Pica', serif;
-    background-image: linear-gradient(135deg, #f5f7fa 0%, #dce0e7 100%);
+    background-color: black;
 }
 
 * {
     margin: 0;
     padding: 0;
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

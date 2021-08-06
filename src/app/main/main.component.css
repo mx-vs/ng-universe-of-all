@@ -1,41 +1,39 @@
 .homeDiv {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
     text-align: center;
     color: black;
     height: 600px;
-    width: 800px;
+    width: 650px;
+    padding: 10px;
     position: relative;
     margin: auto;
-    padding: 10px;
 }
 
-.homeDiv p {
-    margin: 10px;
+p {
+    margin-top: 10px;
+    color: white;
 }
 
 ul {
-    z-index: 0;
     display: flex;
+    z-index: 0;
     list-style: none;
-    margin-top: 10px;
-
 }
 
 li {
     width: 500px;
     padding: 5px;
-    background-color: whitesmoke;
-    border: 1px solid grey;
-    border-radius: 2px;
-    outline: whitesmoke;
+    margin: 10px;
+    color: white;
+    background-color: #242526;
+    border: 1px solid rgb(92, 92, 92);
 }
 
 .mapDiv {
     overflow: visible;
     z-index: 1;
-    margin-top: 10px;
 }
 
 .map {
@@ -51,7 +49,7 @@ li {
 h1 {
     font-size: 16px;
     color: whitesmoke;
-    background-color: #FFBF00;
+
     border-radius: 5px;
     padding: 10px;
 }

@@ -5,11 +5,13 @@ header {
     text-align: center;
     line-height: 30px;
     outline: 1px solid rgb(173, 172, 172);
-    background-color: #75eea7 ;
+    background: black;
+    
 }
 
 h1 {
     color: white;
+    background: #006eff;    
     font-size: 18px;
     width: 200px;
     margin: 10px;
@@ -31,6 +33,7 @@ a {
     font-size: 16px;
     width: 150px;
     color: white;
+    background-color: #ff9100;
     text-align: center;
     margin: 10px;
     border-radius: 5px;

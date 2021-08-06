@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "ng-universe-of-all": {
+      "hosting": {
+        "ng-universe-of-all": [
+          "ng-universe-of-all"
+        ]
+      }
+    }
+  }
+}

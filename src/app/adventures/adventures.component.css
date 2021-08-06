@@ -1,0 +1,47 @@
+.advDiv {
+    color: silver;
+}
+
+.adventure {
+    width: 750px;
+    height: 200px;
+    display: flex;
+    align-content: space-between;
+    border: 2px solid silver;
+    border-radius: 3px;
+    margin: 20px auto;
+}
+
+.textWrapper {
+    margin: 20px;
+    z-index: 0;
+    font-size: 18px;
+}
+
+.textWrapper p {
+    margin-top: 5px;
+}
+
+.imgWrapper img {
+    width: 300px;
+    height: 196px;
+    object-fit: cover;
+}
+
+.joinBtn {
+    color: silver;
+    font-family: 'IM Fell DW Pica', serif;
+    font-size: 15px;
+    margin-top: 50px;
+    width: 130px;
+    height: 30px;
+    border: 2px solid silver;
+    border-radius: 3px;
+    cursor: pointer;
+    align-self: flex-end;
+    z-index: -1;
+}
+
+.joinBtn:hover {
+    color: black;
+}
