@@ -1,0 +1,59 @@
+<main class="charDetailsMain">
+    <section class="charDetailsHeaders">
+        <h4>Information</h4>
+        <h4>Attributes</h4>
+        <h4>Details</h4>
+    </section>
+
+    "Your character is not saved! Would you like to exit this page?"
+    <form onSubmit={saveCharToDatabase} class="charDetailsForm">
+        <section class="charDetailsSection">
+            <label htmlFor="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+            <label htmlFor="race">Race:</label>
+            <input type="text" id="race" name="race" readOnly />
+            <label htmlFor="classDND">Class:</label>
+            <select id="classDND" name="classDND" >
+                
+            </select>
+            <label htmlFor="alignment">Alignment:</label>
+            <select id="alignment" name="alignment">
+                <option>Chaotic</option>
+                <option>Neutral</option>
+                <option>Lawful</option>
+                <option>Evil</option>
+            </select>
+            <label htmlFor="imageUrl">ImageURL:</label>
+            <input type="text" id="imageUrl" name="imageUrl" required />
+        </section>
+
+        <section class="charDetailsSection">
+            <label htmlFor="str">Strength:</label>
+            <input type="number" id="str" name="str" required />
+            <label htmlFor="dex">Dexterity:</label>
+            <input type="number" id="dex" name="dex" required />
+            <label htmlFor="con">Constitution:</label>
+            <input type="number" id="con" name="con" required />
+            <label htmlFor="int">Intelligence:</label>
+            <input type="number" id="int" name="int" required />
+            <label htmlFor="wis">Wisdom:</label>
+            <input type="number" id="wis" name="wis" required />
+            <label htmlFor="cha">Charisma:</label>
+            <input type="number" id="cha" name="cha" required />
+        </section>
+
+        <section class="charDetailsSection">
+            <label htmlFor="desc">Description:</label>
+            <textarea type="text" id="desc" name="desc" rows="4" required></textarea>
+            <label htmlFor="features">Features & Traits:</label>
+            <textarea type="text" id="features" name="features" rows="4" required></textarea>
+        </section>
+
+        <section class="charDetailsButtons">
+            <input type="button" id="rollbtn" name="rollbtn" class="rollButton" />
+            <label htmlFor="rollbtn">Roll Attributes</label>
+            <input type="submit" id="savebtn" name="savebtn" class="saveButton" />
+            <label htmlFor="savebtn">Save Character</label>
+        </section>
+    </form>
+</main>

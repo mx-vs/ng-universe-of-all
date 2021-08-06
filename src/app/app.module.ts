@@ -21,6 +21,7 @@ import { MyCharactersComponent } from './my-characters/my-characters.component';
 import { RealmSelectComponent } from './realm-select/realm-select.component';
 import { RaceSelectComponent } from './race-select/race-select.component';
 import { CharacterCreatorComponent } from './character-creator/character-creator.component';
+import { CharacterCreatorDetailsComponent } from './character-creator-details/character-creator-details.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { CharacterCreatorComponent } from './character-creator/character-creator
     MyCharactersComponent,
     RealmSelectComponent,
     RaceSelectComponent,
-    CharacterCreatorComponent
+    CharacterCreatorComponent,
+    CharacterCreatorDetailsComponent
   ],
   imports: [
     BrowserModule,
