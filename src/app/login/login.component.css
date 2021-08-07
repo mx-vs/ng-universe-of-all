@@ -22,37 +22,25 @@ form {
 
 form input {
     background-color: white;
-    font-family: 'IM Fell DW Pica', serif;
-    font-size: 20px;
+    font-size: 14px;
     height: 30px;
     margin-bottom: 20px;
 }
 
-button {
-    width: 0.1px;
-	height: 0.1px;
-	opacity: 0;
-	overflow: hidden;
-	position: absolute;
-    z-index: -1;
+label {
+    font-size: 16px;
+    margin-bottom: 10px;
 }
 
-button + label {
-    background:
-    linear-gradient(45deg, silver 50%, transparent 0) right /250% 100% no-repeat,
-    linear-gradient(45deg, transparent 50%,silver 0) left /250% 100% no-repeat;
-    transition: 0.3s;
-    text-align: center;
-    border: 1px solid;
-    color: silver;
-    height: 33.78px;
-    width: 200px;
-    padding: 3px;
-    margin: auto auto 10px auto;
-}
-
-button + label:hover {
-    background-position: center;
+.loginBtn {
+    font-size: 16px !important;
     color: black;
+    width: 250px;
+    position: relative;
+    left: 175px;
+    border-radius: 4px;
+}
+
+.loginBtn :hover {
     cursor: pointer;
 }

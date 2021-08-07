@@ -1,9 +1,10 @@
 <header>
     <h1 routerLink="/">The Universe of All</h1>
     <nav>
-            <a routerLink="/register">Register</a>
-            <a (click)="signOut()">Logout</a>
-            <a routerLink="/adventures">Adventures</a>
-            <a routerLink="/my-characters">xxx's Characters</a>
+        <a routerLink="/adventures">Adventures</a>
+        <a routerLink="/register" *ngIf="!currentUser">Register</a>
+        <a routerLink="/login" *ngIf="!currentUser">Login</a>
+        <a routerLink="/my-characters" *ngIf="currentUser">My Characters</a>
+        <a (click)="signOut()" *ngIf="currentUser">Logout</a>
     </nav>
 </header>

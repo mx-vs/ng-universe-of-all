@@ -1,5 +1,6 @@
 <div class="homeDiv">
-        <h1 routerLink="/register" >Please Register or Login to Create Character</h1>
+        <button routerLink="/character-creator" *ngIf="currentUser">Create a Character</button>
+        <button routerLink="/register" *ngIf="!currentUser">Please Register or Login to Create Character</button>
 
         <p>
             A cosmic entity beyond mortal imagination, refered simply by the wise as All, is said to be the creator of

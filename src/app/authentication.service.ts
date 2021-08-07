@@ -10,34 +10,34 @@ export class AuthService {
 
   constructor(
     private afAuth: AngularFireAuth,
-    private router: Router) {}
+    private router: Router) { }
 
   login(email: string, password: string) {
     this.afAuth.signInWithEmailAndPassword(email, password)
-    .then(value => {
-      console.log('User has logged in');
-      this.router.navigateByUrl('/');
-    })
-    .catch(err => {
-      console.log('Something went wrong: ', err.message);
-    });
+      .then(value => {
+        localStorage.setItem("currentUser", email);
+        this.router.navigateByUrl('/');
+      })
+      .catch(err => {
+        console.log('Something went wrong: ', err.message);
+      });
   }
 
   emailSignup(email: string, password: string, repeatPassword: string) {
     this.afAuth.createUserWithEmailAndPassword(email, password)
-    .then(value => {
-      console.log('User has registered and is logged in');
-     this.router.navigateByUrl('/');
-    })
-    .catch(error => {
-      console.log('Something went wrong: ', error);
-    });
+      .then(value => {
+        localStorage.setItem("currentUser", email);
+        this.router.navigateByUrl('/');
+      })
+      .catch(error => {
+        console.log('Something went wrong: ', error);
+      });
   }
 
   logout() {
     this.afAuth.signOut().then(() => {
-      console.log('User has logged off');
-      this.router.navigate(['/']);
+      localStorage.removeItem("currentUser");
+      this.router.navigateByUrl('/login');
     });
   }
 
