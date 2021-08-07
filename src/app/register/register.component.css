@@ -22,44 +22,42 @@ form {
 
 form input {
     background-color: white;
-    font-family: 'IM Fell DW Pica', serif;
-    font-size: 20px;
+    font-size: 14px;
     height: 30px;
     margin-bottom: 20px;
 }
 
-button {
-    width: 0.1px;
-	height: 0.1px;
-	opacity: 0;
-	overflow: hidden;
-	position: absolute;
-    z-index: -1;
+label {
+    font-size: 16px;
+    margin-bottom: 10px;
 }
 
-button + label,
-.linkToLoginBtn {
-    text-align: center;
-    border: 1px solid;
-    color: silver;
-    height: 33.78px;
-    width: 200px;
-    padding: 3px;
-    margin: auto auto 10px auto;
-}
-
-button + label:hover,
-.linkToLoginBtn:hover {
-    background-position: center;
+.registerBtn {
+    font-size: 16px !important;
     color: black;
+    width: 250px;
+    position: relative;
+    left: 175px;
+    border-radius: 4px;
+}
+
+.registerBtn :hover {
     cursor: pointer;
 }
 
-.linkToLoginBtn {
-    margin-left: 20px;
-    margin-top: 30px;
-    width: 150px;
-    height: 30px;
-    font-family: 'IM Fell DW Pica', serif;
-    font-size: 18px;
+h3 {
+    text-align: center;
 }
+
+.linkToLoginBtn {
+    width: 200px;
+    height: 30px;
+    font-size: 14px;
+    position: relative;
+    left: 200px;
+}
+
+.linkToLoginBtn:hover {
+    cursor: pointer;
+}
+

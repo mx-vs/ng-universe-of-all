@@ -1,10 +1,10 @@
 <div>
     <h2>Login</h2>
-    <form action="">
+    <form #formData='ngForm' (ngSubmit)='onSubmit(formData)'>
         <label htmlFor="email">Email:</label>
-        <input type="email" name="email" />
+        <input type="email" name="email" (ngModel)="email" required/>
         <label htmlFor="password">Password:</label>
-        <input type="password" name="password" />
-        <input type="submit" id="loginbtn" name="loginbtn" value="Login"/>
+        <input type="password" name="password" (ngModel)="password" required/>
+        <input type="submit" id="loginbtn" name="loginbtn" value="Login" [disabled]="!formData.valid"/>
     </form>
 </div>
