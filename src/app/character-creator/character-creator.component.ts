@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CharacterCreatorComponent implements OnInit {
 
+  realm = '';
+  race = '';
+
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(): void { }
+
+  selectRealm(realmSelect: string) {
+    this.realm = realmSelect;
   }
 
+  selectRace(raceSelect: string) {
+    this.race = raceSelect;
+  }
 }

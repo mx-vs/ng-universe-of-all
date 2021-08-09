@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-race-select',
@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RaceSelectComponent implements OnInit {
 
+  @Input() realm = '';
+  @Output() raceSelect = new EventEmitter<string>();
+
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
+  selectRace(value: string) {
+    this.raceSelect.emit(value);
+  }
 }

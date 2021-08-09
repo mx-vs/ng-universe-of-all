@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-character-creator-details',
@@ -7,9 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CharacterCreatorDetailsComponent implements OnInit {
 
+  @Input() race = '';
+
   constructor() { }
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

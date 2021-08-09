@@ -5,6 +5,7 @@ div {
     width: 600px;
     height: 450px;
     border: 2px solid silver;
+    border-radius: 4px;
     padding: 30px 30px 0px 30px;
     color: white;
 }
