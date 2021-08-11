@@ -22,7 +22,9 @@ import { RealmSelectComponent } from './realm-select/realm-select.component';
 import { RaceSelectComponent } from './race-select/race-select.component';
 import { CharacterCreatorComponent } from './character-creator/character-creator.component';
 import { CharacterCreatorDetailsComponent } from './character-creator-details/character-creator-details.component';
+
 import { AuthService } from './authentication.service';
+import { CreateCharacterService } from "./create-character.service";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAs8xk5pNdH8c9jkNIcmHKtSViUL-h0VKI",
@@ -60,7 +62,7 @@ const firebaseConfig = {
     AngularFirestoreModule,
     AngularFireAuthModule
   ],
-  providers: [AuthService],
+  providers: [AuthService, CreateCharacterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

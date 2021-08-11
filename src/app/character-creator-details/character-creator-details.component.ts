@@ -1,4 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { CreateCharacterService } from '../create-character.service';
+import Character from "../character";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-character-creator-details',
@@ -7,9 +10,16 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class CharacterCreatorDetailsComponent implements OnInit {
 
-  @Input() race = '';
+  @Input() race = 'goliath';
+  character: Character = new Character();
 
-  constructor() { }
+  constructor(private createCharacterService: CreateCharacterService, private router: Router) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
+
+  onSubmit(formData) {
+    this.createCharacterService.saveCharToDatabase(this.character);
+    console.log('Char submitted');
+    this.router.navigateByUrl('/');
+  }
 }

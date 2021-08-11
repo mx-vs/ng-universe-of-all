@@ -10,5 +10,4 @@ export class GetUserService {
   getUser() {
     return localStorage.getItem("currentUser");
   }
-  
 }

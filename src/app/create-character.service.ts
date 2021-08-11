@@ -1,29 +1,23 @@
 import { Injectable } from '@angular/core';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { Router } from '@angular/router';
+
+import Character from './character';
+import { GetUserService } from './get-user.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CreateCharacterService {
+  character: Character;
 
-  constructor() { }
-  /* const saveCharToDatabase = (event) => {
-    event.preventDefault();
-    firebase.firestore().collection(currentUser).add({
-        name: name,
-        raceDnd: raceDnd,
-        classNameDND: classNameDND,
-        alignment: alignment,
-        imageUrl: imageUrl,
-        str: str,
-        dex: dex,
-        con: con,
-        int: int,
-        wis: wis,
-        cha: cha,
-        desc: desc,
-        features: features
-    }).then(() => {
-        alert("Character has been created! You will now be redirected to your characters page!")
-        history.push("/my-characters");
-    })} */
+  constructor(private db: AngularFirestore, private getUserService: GetUserService, private router: Router) { }
+
+  saveCharToDatabase(character: Character) {
+    const currentUser = this.getUserService.getUser();
+    this.db.collection(currentUser).add({...character}).then(() => {
+      alert("Character has been created! You will now be redirected to your characters page!")
+      this.router.navigateByUrl('/');
+    })
+  }
 }
