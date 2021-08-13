@@ -12,13 +12,30 @@ export class CharacterCreatorDetailsComponent /*implements OnInit*/ {
 
   @Input() race = '';
   character: Character = new Character();
+  fetchedClasses: [];
 
   constructor(private createCharacterService: CreateCharacterService, private router: Router) { }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+    fetch("https://www.dnd5eapi.co/api/classes")
+        .then(res => res.json())
+        .then(data => {
+            this.fetchedClasses = data.results.map((classDnd) => {
+                return classDnd.name;
+            })
+        })
+   }
 
   onSubmit(formData) {
-    this.createCharacterService.saveCharToDatabase(this.character);
-    this.router.navigateByUrl('/');
+    if (formData.valid) {
+      this.createCharacterService.saveCharToDatabase(this.character);
+      this.router.navigateByUrl('/');   
+    } else {
+      alert('Please fill in all fields')
+    }
+  }
+
+  openRoller() {
+    window.open("https://rgbstudios.org/dnd-dice/char?r=#");
   }
 }

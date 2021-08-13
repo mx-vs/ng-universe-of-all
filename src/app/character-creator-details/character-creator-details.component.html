@@ -1,25 +1,26 @@
-<main class="charDetailsMain">
+<main class="charDetailsMain" *ngIf="race">
+    <div>All fields are required</div>
     <section class="charDetailsHeaders">
         <h4>Information</h4>
         <h4>Attributes</h4>
         <h4>Details</h4>
     </section>
 
-    <p>Race: {{race}}</p>
-
     "Your character is not saved! Would you like to exit this page?"
     <form #formData='ngForm' (ngSubmit)='onSubmit(formData)' class="charDetailsForm">
         <section class="charDetailsSection">
             <label htmlFor="name">Name:</label>
-            <input type="text" id="name" name="name" [(ngModel)]="character.name" required />
+            <input type="text" id="name" name="name" [(ngModel)]="character.name" />
             <label htmlFor="race">Race:</label>
-            <input type="text" id="race" name="race" ngModel="{{race}}"/>
+            <select id="race" name="race" [(ngModel)]="character.race">
+                <option selected >{{race}}</option>
+            </select>
             <label htmlFor="classDND">Class:</label>
             <select id="classDND" name="classDND" [(ngModel)]="character.classDND">
-                <option>Druid</option>
+                <option *ngFor="let classDND of fetchedClasses" >{{classDND}}</option>
             </select>
             <label htmlFor="alignment">Alignment:</label>
-            <select id="alignment" name="alignment" [(ngModel)]="character.alignment">
+            <select id="alignment" name="alignment" [(ngModel)]="character.alignment" >
                 <option>Chaotic</option>
                 <option>Neutral</option>
                 <option>Lawful</option>
@@ -52,7 +53,7 @@
         </section>
 
         <section class="charDetailsButtons">
-            <input type="button" id="rollbtn" name="rollbtn" class="rollButton" value="Roll Attributes" />
+            <input type="button" id="rollbtn" name="rollbtn" class="rollButton" value="Roll Attributes" (click)="openRoller()"/>
             <input type="submit" id="savebtn" name="savebtn" class="saveButton" value="Save Character"/>
         </section>
     </form>

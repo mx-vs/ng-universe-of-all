@@ -13,6 +13,10 @@ export class RaceSelectComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {}
+  
+  scroll(el: HTMLElement) {
+    el.scrollIntoView({behavior: 'smooth'});
+  }
 
   selectRace(value: string) {
     this.raceSelect.emit(value);

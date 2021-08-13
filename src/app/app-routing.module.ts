@@ -16,7 +16,6 @@ const routes: Routes = [
   {path:'login', component: LoginComponent},
   {path:'adventures', component: AdventuresComponent},
   {path:'character-creator', component: CharacterCreatorComponent},
-  {path:'character-creator-details', component: CharacterCreatorDetailsComponent},
   {path:'my-characters', component: MyCharactersComponent},
   {path:'**', component: PageNotFoundComponent}
 ];

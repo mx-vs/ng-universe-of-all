@@ -1,6 +1,10 @@
+div {
+    font-size: 18px;
+}
+
 .charDetailsMain {
-    height: 725px;
-    padding: 30px 0px;
+    height: 670px;
+    padding: 20px 0px;
     font-size: 20px;
     color: silver;
 }
@@ -11,7 +15,7 @@
 }
 
 .charDetailsHeaders * {
-    margin: 20px 80px 0px 80px;
+    margin: 10px 80px 0px 80px;
     position: relative;
     right: 20px;
 }
@@ -69,6 +73,10 @@ select {
     justify-content: center !important;
     width: 900px !important;
     margin: 30px !important;
+}
+
+.charDetailsButtons input:hover {
+    cursor: pointer;
 }
 
 input[type=number]::-webkit-inner-spin-button, 

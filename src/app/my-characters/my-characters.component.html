@@ -1,35 +1,41 @@
-<button class="printBtn">Print My Characters</button>
+<button class="printBtn" [useExistingCss]="true" printSectionId="print-section" ngxPrint>Print</button>
 
-<div *ngFor="let character of Characters; let i = index" class="myProfileDiv">
-    <section class="char">
-        <section class="charImgWrapper">
-            <img src="{{ character.imageUrl }}" alt="" />
+<div *ngFor="let character of Characters; let i = index" class="myProfileDiv" id="print-section">
+
+    <div>
+        <section class="char">
+            <section class="charImgWrapper">
+                <img src="{{ character.imageUrl }}" alt="" />
+            </section>
+
+            <section class="charTextWrapper">
+                <h3 id="name"><strong>{{ character.name }}</strong></h3>
+                <p><strong>Race:</strong> {{ character.race }} </p>
+                <p><strong>Class:</strong> {{ character.classDND }}</p>
+                <p><strong>Alignment:</strong> {{ character.alignment }}</p>
+            </section>
+
+            <ul class="attributesLiWrapper">
+                <h4> <strong>Attributes</strong></h4>
+                <li> <strong> Strenght: </strong> {{ character.str }}</li>
+                <li> <strong> Dexterity: </strong> {{ character.dex }}</li>
+                <li> <strong> Constitution: </strong> {{ character.con }}</li>
+                <li> <strong> Intelligence: </strong> {{ character.int }}</li>
+                <li> <strong> Wisdom: </strong> {{ character.wis }}</li>
+                <li> <strong> Charisma: </strong> {{ character.cha }}</li>
+            </ul>
         </section>
-
-        <section class="charTextWrapper">
-            <h3 id="name">{{ character.name }}</h3>
-            <p>Race: {{ character.race }} </p>
-            <p>Class: {{ character.classDND }}</p>
-            <p>Alignment: {{ character.alignment }}</p>
-        </section>
-
-        <ul class="attributesLiWrapper">
-            <h4>Attributes</h4>
-            <li>Strenght: {{ character.str }}</li>
-            <li>Dexterity: {{ character.dex }}</li>
-            <li>Constitution: {{ character.con }}</li>
-            <li>Intelligence: {{ character.int }}</li>
-            <li>Wisdom: {{ character.wis }}</li>
-            <li>Charisma: {{ character.cha }}</li>
-        </ul>
 
         <section>
             <button class="btn" (click)="deleteCharacter(character)">Delete Character</button>
         </section>
-    </section>
 
-    <section class="charDetailsWrapper">
-        <p><strong>Description:</strong>{{ character.desc }}</p>
-        <p><strong>Features & Traits:</strong>{{ character.features }}</p>
-    </section>
+        <section class="charDetailsWrapper">
+            <p><strong>Description: </strong>{{ character.desc }}</p>
+            <p><strong>Features & Traits: </strong>{{ character.features }}</p>
+        </section>
+    </div>
+
+
+
 </div>

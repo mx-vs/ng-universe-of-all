@@ -15,11 +15,11 @@
         </div>
 
         <div>
-            <img src="https://i.imgur.com/88IrDbe.jpg" alt="" class="raceImg" routerLink="/character-creator-details" (click)="selectRace('Goliath')"/>
+            <img src="https://i.imgur.com/88IrDbe.jpg" alt="" class="raceImg" (click)="selectRace('Goliath'); scroll(target)" />
         </div>
 
         <div>
-            <img src="https://i.imgur.com/VmYg0Zl.jpg" alt="" class="raceImg" routerLink="/character-creator-details" (click)="selectRace('Vampirian')"/>
+            <img src="https://i.imgur.com/VmYg0Zl.jpg" alt="" class="raceImg" (click)="selectRace('Vampirian'); scroll(target)" />
         </div>
 
         <div>
@@ -49,11 +49,11 @@
         </div>
 
         <div>
-            <img src="https://i.imgur.com/LeQtQM3.png" alt="" class="raceImg" routerLink="/character-creator-details" (click)="selectRace('Lumi')"/>
+            <img src="https://i.imgur.com/LeQtQM3.png" alt="" class="raceImg" (click)="selectRace('Lumi'); scroll(target)"/>
         </div>
 
         <div>
-            <img src="https://i.imgur.com/RRGpfki.png" alt="" class="raceImg" routerLink="/character-creator-details" (click)="selectRace('Crystalborn')"/>
+            <img src="https://i.imgur.com/RRGpfki.png" alt="" class="raceImg" (click)="selectRace('Crystalborn'); scroll(target)"/>
         </div>
 
         <div>
@@ -68,4 +68,5 @@
             </p>
         </div>
     </section>
+    <div #target></div>
 </section>

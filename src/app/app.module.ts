@@ -27,6 +27,8 @@ import { AuthService } from './authentication.service';
 import { CreateCharacterService } from "./create-character.service";
 import { GetCharactersService } from './get-characters.service';
 
+import {NgxPrintModule} from 'ngx-print';
+
 const firebaseConfig = {
   apiKey: "AIzaSyAs8xk5pNdH8c9jkNIcmHKtSViUL-h0VKI",
   authDomain: "ng-universe-of-all.firebaseapp.com",
@@ -61,7 +63,8 @@ const firebaseConfig = {
     BrowserAnimationsModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFirestoreModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    NgxPrintModule
   ],
   providers: [AuthService, CreateCharacterService, GetCharactersService],
   bootstrap: [AppComponent]

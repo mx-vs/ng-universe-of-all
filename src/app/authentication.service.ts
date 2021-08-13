@@ -18,19 +18,23 @@ export class AuthService {
         this.router.navigateByUrl('/');
       })
       .catch(err => {
-        console.log('Something went wrong: ', err.message);
+        alert(err.message);
       });
   }
 
   emailSignup(email: string, password: string, repeatPassword: string) {
-    this.afAuth.createUserWithEmailAndPassword(email, password)
+    if (password === repeatPassword) {
+      this.afAuth.createUserWithEmailAndPassword(email, password)
       .then(value => {
         localStorage.setItem("currentUser", email);
         this.router.navigateByUrl('/');
       })
       .catch(error => {
-        console.log('Something went wrong: ', error);
+        alert(error);
       });
+    } else {
+      alert('Passwords don\'t match');
+    }
   }
 
   logout() {
