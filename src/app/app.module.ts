@@ -25,6 +25,7 @@ import { CharacterCreatorDetailsComponent } from './character-creator-details/ch
 
 import { AuthService } from './authentication.service';
 import { CreateCharacterService } from "./create-character.service";
+import { GetCharactersService } from './get-characters.service';
 
 const firebaseConfig = {
   apiKey: "AIzaSyAs8xk5pNdH8c9jkNIcmHKtSViUL-h0VKI",
@@ -62,7 +63,7 @@ const firebaseConfig = {
     AngularFirestoreModule,
     AngularFireAuthModule
   ],
-  providers: [AuthService, CreateCharacterService],
+  providers: [AuthService, CreateCharacterService, GetCharactersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

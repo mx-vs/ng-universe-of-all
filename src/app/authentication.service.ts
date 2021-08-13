@@ -9,8 +9,7 @@ import 'rxjs/add/operator/switchMap';
 export class AuthService {
 
   constructor(
-    private afAuth: AngularFireAuth,
-    private router: Router) { }
+    private afAuth: AngularFireAuth, private router: Router) { }
 
   login(email: string, password: string) {
     this.afAuth.signInWithEmailAndPassword(email, password)

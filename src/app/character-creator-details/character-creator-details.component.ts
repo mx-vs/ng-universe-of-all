@@ -8,9 +8,9 @@ import { Router } from '@angular/router';
   templateUrl: './character-creator-details.component.html',
   styleUrls: ['./character-creator-details.component.css']
 })
-export class CharacterCreatorDetailsComponent implements OnInit {
+export class CharacterCreatorDetailsComponent /*implements OnInit*/ {
 
-  @Input() race = 'goliath';
+  @Input() race = '';
   character: Character = new Character();
 
   constructor(private createCharacterService: CreateCharacterService, private router: Router) { }
@@ -19,7 +19,6 @@ export class CharacterCreatorDetailsComponent implements OnInit {
 
   onSubmit(formData) {
     this.createCharacterService.saveCharToDatabase(this.character);
-    console.log('Char submitted');
     this.router.navigateByUrl('/');
   }
 }
