@@ -23,5 +23,8 @@ export class MyCharactersComponent implements OnInit {
     });
   }
 
-  deleteCharacter = character => this.getCharactersService.deleteCharacter(character);
+  deleteCharacter = character => {
+    this.getCharactersService.deleteCharacter(character);
+    alert('Character has been deleted! You will now be redirected to the home page!')
+  };
 }

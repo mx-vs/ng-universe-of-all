@@ -11,15 +11,22 @@ header {
 
 h1 {
     color: white;
-    background: #006eff;    
+    background-color: #006eff !important;    
     font-size: 18px;
     width: 200px;
     margin: 10px;
     border-radius: 2px;
+    background:
+    radial-gradient(farthest-side, transparent calc(100% - 150px), #ff9100 0) 
+    center /var(--d, 600px) var(--d, 600px) no-repeat;
+    transition: 0.5s;
+
 }
 
 h1:hover {
     cursor: pointer;
+    background-color: #ff9100;
+    --d: 300px;
 }
 
 nav {
@@ -33,14 +40,20 @@ a {
     font-size: 16px;
     width: 150px;
     color: white;
-    background-color: #ff9100;
     text-align: center;
     margin: 10px;
     border-radius: 5px;
+    background-color: #ff9100 !important;
+    background:
+    radial-gradient(farthest-side, transparent calc(100% - 150px), #006eff 0) 
+    center /var(--d, 600px) var(--d, 600px) no-repeat;
+    transition: 0.5s;
 }
 
 a:hover {
     cursor: pointer;
+    background-color: #006eff;
+    --d: 300px;
 }
 
 a:hover, a:visited, a:link, a:active

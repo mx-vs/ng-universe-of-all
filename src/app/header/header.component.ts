@@ -3,6 +3,8 @@ import { AuthService } from '../authentication.service';
 import { Router } from '@angular/router';
 import { GetUserService } from "../get-user.service";
 
+import { trigger, state, style, animate, transition } from '@angular/animations';
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',

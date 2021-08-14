@@ -39,8 +39,7 @@ div {
     margin: 5px;
 }
 
-.charDetailsForm input,
-.charDetailsForm textarea {
+.charDetailsForm input, .charDetailsForm textarea {
     border: 1px solid silver;
     background-color: white;
     font-family: 'IM Fell DW Pica', serif;
@@ -68,23 +67,31 @@ select {
     width: 200px;
 }
 
-.charDetailsButtons  {
+.charDetailsButtons {
     flex-direction: row !important;
     justify-content: center !important;
     width: 900px !important;
     margin: 30px !important;
 }
 
-.charDetailsButtons input:hover {
-    cursor: pointer;
-}
 
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-  margin: 0; 
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 input[type=number] {
     -moz-appearance: textfield;
-  }
+}
+
+input[type=button], input[type=submit] {
+    background-color: #ff9100 !important;
+    background: radial-gradient(farthest-side, transparent calc(100% - 150px), #006eff 0) center /var(--d, 600px) var(--d, 600px) no-repeat;
+    transition: 0.5s;
+}
+
+input[type=button]:hover, input[type=submit]:hover {
+    cursor: pointer;
+    background-color: #006eff;
+    --d: 300px;
+}

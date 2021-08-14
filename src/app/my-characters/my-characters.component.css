@@ -3,6 +3,20 @@
     margin: 10px 750px;
     width: 200px;
     height: 30px;
+    font-size: 16px;
+    border-radius: 4px;
+    color: white;
+    background-color: #ff9100 !important;
+    background:
+    radial-gradient(farthest-side, transparent calc(100% - 150px), #006eff 0) 
+    center /var(--d, 600px) var(--d, 600px) no-repeat;
+    transition: 0.5s;
+}
+
+.printBtn:hover {
+    cursor: pointer;
+    background-color: #006eff;
+    --d: 300px;
 }
 
 .myProfileDiv {
@@ -63,14 +77,15 @@
     font-size: 14px;
     width: 120px;
     height: 30px;
-    border: 2px solid silver;
-    border-radius: 3px;
+    border-radius: 4px;
     cursor: pointer;
     align-self: flex-end;
+    color: rgb(75, 75, 75);
 }
 
 .btn:hover {
-    background-position: center;
+    cursor: pointer;
+
 }
 
 @media print {

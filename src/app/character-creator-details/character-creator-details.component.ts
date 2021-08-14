@@ -29,7 +29,7 @@ export class CharacterCreatorDetailsComponent /*implements OnInit*/ {
   onSubmit(formData) {
     if (formData.valid) {
       this.createCharacterService.saveCharToDatabase(this.character);
-      this.router.navigateByUrl('/');   
+      alert("Character has been created! You will now be redirected to your characters page!") 
     } else {
       alert('Please fill in all fields')
     }

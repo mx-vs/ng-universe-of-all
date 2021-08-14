@@ -16,8 +16,7 @@ export class CreateCharacterService {
   saveCharToDatabase(character: Character) {
     const currentUser = this.getUserService.getUser();
     this.db.collection(currentUser).add({...character}).then(() => {
-      alert("Character has been created! You will now be redirected to your characters page!")
-      this.router.navigateByUrl('/');
+      this.router.navigateByUrl('/my-characters');
     })
   }
 }
